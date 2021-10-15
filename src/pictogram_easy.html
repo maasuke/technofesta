@@ -37,7 +37,7 @@
     		<li><a href="index.html"><strong>トップページ</strong><span>Top</span></a></li>
             <li class="active"><a href="pictogram_top.html"><strong>ピクトグラム当てクイズ</strong><span>Pictogram Quiz</span></a></li>
             <li><a href="reinforce_top.html"><strong>強化学習紹介</strong><span>Reinforce Learning</span></a></li>
-            <li><a href="lab.html"><strong>研究室紹介</strong><span>about us</span></a></li>
+            <li><a href="http://lab.inf.shizuoka.ac.jp/yamamoto/" target="_blank"><strong>研究室紹介</strong><span>about us</span></a></li>
 		</ul>   
     </div>
     </nav>
@@ -954,14 +954,20 @@
             document.getElementById("summary").style.display = "none";
         </script>
         
-        <h2>技術紹介</h2>
-    
-        <p>今回出題したピクトグラムはOpenPoseという技術を使用しています。</p>
-        <p>OpenPoseの説明</p>
-    
-        <a href="pictogram_hard.html" class="link_button">動画編</a>
-        <a href="index.html" class="link_button">トップページ</a>
-        <a href="lab.html" class="link_button">研究室紹介</a>
+        <div class="openpose_explain">
+            <h2>技術紹介</h2>
+        
+            <p>今回出題したピクトグラムは<span>OpenPose</span>という技術を使用しています。</p>
+            <h2>OpenPoseとは</h2>
+            <p class="explain">身体に特殊な装置を取り付けることなく、AI(深層学習)を用いることで撮影動画及び画像から人物の骨格点（25点）のx，y座標を取得するシステム
+            </p>
+            <img src="images/openpose_explain.png" alt="" class="openpose">
+            <img src="images/openpose_img.png" alt="" class="openpose" style="width: 500px;">
+            <p class="explain" style="font-size: 80%;">出典：Zhe Cao， Gines Hidalgo， Tomas Simon， Shih-En Wei and Yaser Sheikh: OpenPose: Realtime Multi- Person 2D Pose Estimation using Part Affinity Fields， IEEE Transactions on Pattern Analysis and Machine Intelligence， 2019 </p>
+        </div>
+        <div class="buttons">
+            <a href="pictogram_hard.html" class="link_button">上級編へ</a>
+        </div>
     </div>
     
 

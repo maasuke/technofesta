@@ -15,6 +15,7 @@ p{
 }
 
 p.explain{
+    text-indent: 1rem;
     text-align: left;
 }
 
@@ -105,7 +106,9 @@ input.ok{
     border-radius: 10px;
 }
 
-
+.buttons{
+    margin: 40px;
+}
 
 
 @media (min-width: 600px) {
