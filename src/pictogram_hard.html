@@ -100,7 +100,8 @@
                 <p id="q1correct">正解です！！ なかなかやりますね！</p>
                 <p id="q1incorrect">残念！</p>
                 <p>答えは...<span>スクワット</span>でした。</p>
-                <img src="images/squat_ans.png" alt="" class="img_wide">
+                <img src="images/squat_ans.png" alt="" class="img_wide"><br>
+                <nobr>出典:</nobr><a href="https://www.pakutaso.com/20201020287post-31486.html" target="_blank">フリー写真素材ぱくたそ</a>
             </div>
         </div>
         
@@ -200,7 +201,8 @@
                 <p id="q2correct">正解です！！　まだ序の口かな？</p>
                 <p id="q2incorrect">残念！</p>
                 <p>答えは...<span>自転車に乗る人</span>でした。</p>
-                <img src="images/bicycle_ans.jpg" alt="" class="img_wide">
+                <img src="images/bicycle_ans.jpg" alt="" class="img_wide"><br>
+                <nobr>出典:</nobr><a href="https://www.pakutaso.com/20201051293post-31581.html" target="_blank">フリー写真素材ぱくたそ</a>
             </div>
         </div>
         
@@ -298,7 +300,8 @@
             
             <div id="q3answer">
                 <p>答えは...<span>坂本龍馬</span>でした。</p>
-                <img src="images/ryoma_ans.png" alt="">
+                <img src="images/ryoma_ans.png" alt=""><br>
+                <nobr>出典:</nobr><a href="https://ja.wikipedia.org/wiki/%E5%9D%82%E6%9C%AC%E9%BE%8D%E9%A6%AC" target="_blank">wikipedia</a>
             </div>
         </div>
 
@@ -365,7 +368,9 @@
             <div id="q4AnswerDisp">
                 <p>答えは...<span>王貞治</span>でした。<br>
                 一本足打法がポイントです。</p>
-                <img src="images/sadaharu_ans.png" alt="">
+                <img src="images/sadaharu_ans.png" alt=""><br>
+                <nobr>出典:</nobr><a href="https://baseball-museum.or.jp/hall-of-famers/hof-111/"
+                    target="_blank">野球殿堂博物館</a>
             </div>
         </div>
 
@@ -465,7 +470,8 @@
             <div id="q5answer">
                 <p>答えは...<span>最後の晩餐</span>でした。<br>
                 絵画もピクトグラムにできます！</p>
-                <img src="images/last_supper_ans.png" alt="" class="img_wide">
+                <img src="images/last_supper_ans.png" alt="" class="img_wide"><br>
+                <nobr>出典:</nobr><a href="https://ja.wikipedia.org/wiki/%E6%9C%80%E5%BE%8C%E3%81%AE%E6%99%A9%E9%A4%90_(%E3%83%AC%E3%82%AA%E3%83%8A%E3%83%AB%E3%83%89)" target="_blank">wikipedia</a>
             </div>
         </div>
 
@@ -530,7 +536,10 @@
             <div id="q6answer">
                 <p>答えは...<span>落穂拾い</span>でした。<br>
                 そろそろ難しくなってきたかな？？</p>
-                <img src="images/gleaning_ans.jpg" alt="" class="img_wide">
+                <img src="images/gleaning_ans.jpg" alt="" class="img_wide"><br>
+                <nobr>出典:</nobr><a
+                    href="https://ja.wikipedia.org/wiki/%E8%90%BD%E7%A9%82%E6%8B%BE%E3%81%84_(%E7%B5%B5%E7%94%BB)"
+                    target="_blank">wikipedia</a>
             </div>
         </div>
 
@@ -678,14 +687,15 @@
         <div id="questionInput">
             <div class="parent">
                 <div class="child1">
-                    <img src="images/reiwa.png" alt="" class="img_wide">
+                    <img src="images/reiwa.png" alt="" class="img_wide" id="q8NoHint">
+                    <img src="images/reiwa_hint.png" alt="" class="img_wide" id="q8YesHint">
                 </div>
                 <div class="child2">
                     <input type="text" id="q8userAns" name="q8userAns" placeholder="答えを入力" class="sentence">
                     <input type="button" value="決定" onclick="q8checkCorrectOfIncorrect()" class="ok"><br>
                     <p id="q8correct">正解です！！</p>
                     <p id="q8incorrect">違います！</p>
-                    <input type="button" value="ヒント" onclick="displayHint('q8hint')" class="hintButton">
+                    <input type="button" value="ヒント" onclick="q8DisplayHint()" class="hintButton">
                     <input type="button" value="ギブアップ" onclick="q8DisplayAnswer()" class="answerButton">
                     <p id="q8hint">四角の中に何が書かれているか</p>
                 </div>
@@ -703,6 +713,7 @@
             document.getElementById("q8incorrect").style.display = "none";
             document.getElementById("q8answer").style.display = "none";
             document.getElementById("q8hint").style.display = "none";
+            document.getElementById("q8YesHint").style.display = "none";
 
             function q8checkCorrectOfIncorrect(){
                 const userAns = document.getElementById('q8userAns');
@@ -735,6 +746,14 @@
                     score.scrollIntoView({ behavior: 'smooth' })
                 }
             }
+
+            function q8DisplayHint(){
+                displayHint('q8hint');
+                const noHintImg = document.getElementById('q8NoHint');
+                const yesHintImg = document.getElementById('q8YesHint');
+                noHintImg.style.display = "none";
+                yesHintImg.style.display = "block";
+            }
         </script>
 
         <h2>第９問</h2>
@@ -757,7 +776,9 @@
             
             <div id="q9answer">
                 <p>答えは...<span>ジェンガ</span>でした。</p>
-                <video src="images/jenga_ans.mp4" controls class="img_wide"></video>
+                <video src="images/jenga_ans.mp4" controls class="img_wide"></video><br>
+                <nobr>出典:</nobr><a href="https://elements.envato.com/joyful-family-plays-jenga-VCU4EJS"
+                    target="_blank">envato elements</a>
             </div>
         </div>
 
@@ -820,7 +841,9 @@
             
             <div id="q10answer">
                 <p>答えは...<span>ワクチン接種(注射)</span></p>
-                <video src="images/vaccine_ans.mp4" controls class="img_wide"></video>
+                <video src="images/vaccine_ans.mp4" controls class="img_wide"></video><br>
+                <nobr>出典:</nobr><a href="https://elements.envato.com/afro-man-gets-vaccinated-9HUAQ3P" target="_blank">envato
+                    elements</a>
             </div>
         </div>
 
